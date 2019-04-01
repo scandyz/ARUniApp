@@ -39,38 +39,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
-    @IBOutlet weak var forwardButton: UIButton!
-    //    @IBAction func forwardButton(_ sender: UIButton) {
-//        moveTo(x: 0, y: 0, z: 0.01)
-//
-//    }
     
-    @IBAction func backButton(_ sender: Any) {
-        moveTo(x: 0, y: 0, z: -0.01)
-    }
-    
-    @IBAction func leftButton(_ sender: Any) {
-        moveTo(x: 0.01, y: 0, z: 0)
-    }
-    
-    @IBAction func rightButton(_ sender: Any) {
-        moveTo(x: -0.01, y: 0, z: 0)
-    }
-    
-    @IBAction func upButton(_ sender: Any) {
-        moveTo(x: 0, y: 0.01, z: 0)
-    }
-    
-    @IBAction func downButton(_ sender: Any) {
-        moveTo(x: 0, y: -0.01, z: 0)
-    }
-    
-    @objc func normalTap(_ sender: UIGestureRecognizer){
-        print("Normal tap")
-        singleMoveTo(x: 0, y: 0, z: 0.02)
-    }
-    
-    @objc func longTap(_ sender: UIGestureRecognizer){
+    func gestureRecognizer(_ sender: UILongPressGestureRecognizer, xyz: SCNVector3) {
         if sender.state == .ended {
             print("UIGestureRecognizerStateEnded")
             stopAction(forKey: "moving")
@@ -78,20 +48,68 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
         else if sender.state == .began {
             print("UIGestureRecognizerStateBegan.")
-            moveTo(x: 0, y: 0, z: 0.02)
+            moveTo(x: CGFloat(xyz.x), y: CGFloat(xyz.y), z: CGFloat(xyz.z))
             //Do Whatever You want on Began of Gesture
         }
     }
-    
-    func moveGesture(for button: UIButton) {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(normalTap(_:)))
-        tapGesture.numberOfTapsRequired = 1
-        forwardButton.addGestureRecognizer(tapGesture)
-        button.addGestureRecognizer(tapGesture)
-        
-        let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(longTap(_:)))
-        button.addGestureRecognizer(longGesture)
+
+    @IBAction func moveLeft(_ sender: UITapGestureRecognizer) {
+        singleMoveTo(x: -0.02, y: 0, z: 0)
     }
+    
+    @IBAction func moveRight(_ sender: UITapGestureRecognizer) {
+        singleMoveTo(x: 0.02, y: 0, z: 0)
+    }
+    
+    @IBAction func moveBack(_ sender: UITapGestureRecognizer) {
+        singleMoveTo(x: 0, y: 0, z: 0.02)
+    }
+    
+    @IBAction func moveForward(_ sender: UITapGestureRecognizer) {
+        singleMoveTo(x: 0, y: 0, z: -0.02)
+    }
+    
+    @IBAction func moveUp(_ sender: UITapGestureRecognizer) {
+        singleMoveTo(x: 0, y: 0.02, z: 0)
+    }
+    
+    @IBAction func moveDown(_ sender: UITapGestureRecognizer) {
+        singleMoveTo(x: 0, y: -0.02, z: 0)
+    }
+    
+    
+    @IBAction func downButton(_ sender: UILongPressGestureRecognizer) {
+        
+        let xyz = SCNVector3(x: 0, y: -0.02, z: 0)
+        gestureRecognizer(sender, xyz: xyz)
+    }
+    
+    @IBAction func backButton(_ sender: UILongPressGestureRecognizer) {
+        let xyz = SCNVector3(x: 0, y: 0, z: 0.02)
+        gestureRecognizer(sender, xyz: xyz)
+    }
+    
+    @IBAction func leftButton(_ sender: UILongPressGestureRecognizer) {
+        let xyz = SCNVector3(x: -0.02, y: 0, z: 0)
+        gestureRecognizer(sender, xyz: xyz)
+    }
+    
+    @IBAction func rightButton(_ sender: UILongPressGestureRecognizer) {
+        let xyz = SCNVector3(x: 0.02, y: 0, z: 0)
+        gestureRecognizer(sender, xyz: xyz)
+    }
+    
+    @IBAction func upButton(_ sender: UILongPressGestureRecognizer) {
+        let xyz = SCNVector3(x: 0, y: 0.02, z: 0)
+        gestureRecognizer(sender, xyz: xyz)
+    }
+    
+    @IBAction func forwardButton(_ sender: UILongPressGestureRecognizer) {
+        let xyz = SCNVector3(x: 0, y: 0, z: -0.02)
+        gestureRecognizer(sender, xyz: xyz)
+    }
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,8 +125,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Set the scene to the view
         sceneView.scene = scene
-        
-        moveGesture(for: forwardButton)
         
     }
     
@@ -151,13 +167,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             //planeNode.eulerAngles.x = -.pi/2
             
-            let forestScene = SCNScene(named: "art.scnassets/Cloud.scn")!
+            let forestScene = SCNScene(named: "art.scnassets/Sky.scn")!
             let forestNode = forestScene.rootNode
             forestNode.position = SCNVector3Zero
             
             let shipScene = SCNScene(named: "art.scnassets/ship.scn")!
             let shipNode = shipScene.rootNode.childNodes.first!
             shipNode.position = SCNVector3Zero
+            shipNode.eulerAngles.y = -.pi
             shipNode.position.y = 0.01
 
             //flight(node: shipNode)

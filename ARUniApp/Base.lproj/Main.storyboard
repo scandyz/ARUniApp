@@ -27,25 +27,29 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69l-aC-F9D">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="69l-aC-F9D" secondAttribute="height" multiplier="1:1" id="F9k-Om-mJh"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="vrr-pf-u6v"/>
                                         </constraints>
                                         <state key="normal" title="Frwrd"/>
                                         <connections>
-                                            <action selector="forwardButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="20e-RC-Vo6"/>
+                                            <outletCollection property="gestureRecognizers" destination="S37-5V-VyX" appends="YES" id="iIq-84-vJq"/>
+                                            <outletCollection property="gestureRecognizers" destination="Dte-3X-1Lv" appends="YES" id="Hg6-RU-pox"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ii-79-cbV">
                                         <rect key="frame" x="0.0" y="100" width="50" height="50"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2ii-79-cbV" secondAttribute="height" multiplier="1:1" id="Fxa-bq-q4q"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="geY-DH-LyK"/>
                                         </constraints>
                                         <state key="normal" title="Back"/>
                                         <connections>
-                                            <action selector="backButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="2Gh-dF-QbF"/>
+                                            <outletCollection property="gestureRecognizers" destination="DSc-S5-2OZ" appends="YES" id="dJo-MJ-nAb"/>
+                                            <outletCollection property="gestureRecognizers" destination="ZOV-AR-4iX" appends="YES" id="pyz-jP-hc2"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -57,25 +61,29 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8E-v7-B0R">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="L8E-v7-B0R" secondAttribute="height" multiplier="1:1" id="VQd-no-rbt"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="tuK-qK-tTV"/>
                                         </constraints>
                                         <state key="normal" title="Left"/>
                                         <connections>
-                                            <action selector="leftButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="bmS-kZ-0T0"/>
+                                            <outletCollection property="gestureRecognizers" destination="cdr-w3-YDu" appends="YES" id="WgU-Kb-DHN"/>
+                                            <outletCollection property="gestureRecognizers" destination="MlF-va-fLJ" appends="YES" id="lMX-S6-34W"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKw-Kf-h1r">
                                         <rect key="frame" x="100" y="0.0" width="50" height="50"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="WKw-Kf-h1r" secondAttribute="height" multiplier="1:1" id="0j5-Ow-MK5"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="ik5-gb-dIn"/>
                                         </constraints>
                                         <state key="normal" title="Right"/>
                                         <connections>
-                                            <action selector="rightButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="AQ8-Vy-RwH"/>
+                                            <outletCollection property="gestureRecognizers" destination="ic4-Cy-EFA" appends="YES" id="iyk-dZ-112"/>
+                                            <outletCollection property="gestureRecognizers" destination="9AS-3V-LmB" appends="YES" id="U7V-Cd-7Q7"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -87,25 +95,29 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6G-Zv-LPW">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="h6G-Zv-LPW" secondAttribute="height" multiplier="1:1" id="CTI-H8-AY8"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Zjk-h5-PPo"/>
                                         </constraints>
                                         <state key="normal" title="Up"/>
                                         <connections>
-                                            <action selector="upButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="xPN-Kz-Dhd"/>
+                                            <outletCollection property="gestureRecognizers" destination="2W8-YD-a1a" appends="YES" id="Vn8-eE-g10"/>
+                                            <outletCollection property="gestureRecognizers" destination="35P-IK-IFR" appends="YES" id="lXr-Fj-qqQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPT-Sa-Ir8">
                                         <rect key="frame" x="0.0" y="85" width="50" height="50"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ZPT-Sa-Ir8" secondAttribute="height" multiplier="1:1" id="33l-je-0GF"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="W2m-jt-Dbe"/>
                                         </constraints>
                                         <state key="normal" title="Down"/>
                                         <connections>
-                                            <action selector="downButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Nt6-a1-Sbl"/>
+                                            <outletCollection property="gestureRecognizers" destination="GJG-5M-jax" appends="YES" id="BN8-3b-CkH"/>
+                                            <outletCollection property="gestureRecognizers" destination="A3m-up-ZnC" appends="YES" id="l2g-Tb-OEi"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -121,11 +133,82 @@
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                     </view>
                     <connections>
-                        <outlet property="forwardButton" destination="69l-aC-F9D" id="9U2-ov-QgO"/>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.29999999999999999" id="DSc-S5-2OZ">
+                    <connections>
+                        <action selector="backButton:" destination="BV1-FR-VrT" id="V9D-AB-RIK"/>
+                        <outlet property="delegate" destination="2ii-79-cbV" id="f26-XG-IB2"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.29999999999999999" id="cdr-w3-YDu">
+                    <connections>
+                        <action selector="leftButton:" destination="BV1-FR-VrT" id="StL-Ut-GrI"/>
+                        <outlet property="delegate" destination="L8E-v7-B0R" id="ojD-wQ-mKR"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.29999999999999999" id="ic4-Cy-EFA">
+                    <connections>
+                        <action selector="rightButton:" destination="BV1-FR-VrT" id="RvE-hO-8S1"/>
+                        <outlet property="delegate" destination="WKw-Kf-h1r" id="udN-7N-r8B"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.29999999999999999" id="2W8-YD-a1a">
+                    <connections>
+                        <action selector="upButton:" destination="BV1-FR-VrT" id="1HJ-Sj-aLV"/>
+                        <outlet property="delegate" destination="h6G-Zv-LPW" id="tQq-8W-jLF"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.29999999999999999" id="GJG-5M-jax">
+                    <connections>
+                        <action selector="downButton:" destination="BV1-FR-VrT" id="4UV-I0-4Ve"/>
+                        <outlet property="delegate" destination="ZPT-Sa-Ir8" id="eGe-6D-np6"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="MlF-va-fLJ">
+                    <connections>
+                        <action selector="moveLeft:" destination="BV1-FR-VrT" id="uuu-9g-05h"/>
+                        <outlet property="delegate" destination="L8E-v7-B0R" id="tEZ-Y6-h35"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.29999999999999999" id="S37-5V-VyX">
+                    <connections>
+                        <action selector="forwardButton:" destination="BV1-FR-VrT" id="EqF-y9-bUb"/>
+                        <outlet property="delegate" destination="69l-aC-F9D" id="2tg-IH-LM8"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="9AS-3V-LmB">
+                    <connections>
+                        <action selector="moveRight:" destination="BV1-FR-VrT" id="Pel-N4-wRp"/>
+                        <outlet property="delegate" destination="WKw-Kf-h1r" id="idf-TA-EuP"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ZOV-AR-4iX">
+                    <connections>
+                        <action selector="moveBack:" destination="BV1-FR-VrT" id="7iA-as-o3X"/>
+                        <outlet property="delegate" destination="2ii-79-cbV" id="KwP-NC-nUE"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Dte-3X-1Lv">
+                    <connections>
+                        <action selector="moveForward:" destination="BV1-FR-VrT" id="MHu-po-7WF"/>
+                        <outlet property="delegate" destination="69l-aC-F9D" id="g2B-AS-vFE"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="35P-IK-IFR">
+                    <connections>
+                        <action selector="moveUp:" destination="BV1-FR-VrT" id="MVe-tN-ReG"/>
+                        <outlet property="delegate" destination="h6G-Zv-LPW" id="rKa-7u-XYp"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="A3m-up-ZnC">
+                    <connections>
+                        <action selector="moveDown:" destination="BV1-FR-VrT" id="gAg-46-Lfb"/>
+                        <outlet property="delegate" destination="ZPT-Sa-Ir8" id="hep-RK-uWG"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.4384236453202" y="133.59999999999999"/>
         </scene>
